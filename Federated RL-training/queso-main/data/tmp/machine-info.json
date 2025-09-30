@@ -1,0 +1,12 @@
+{
+    "system": "Windows",
+    "name": "LEGION-03",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "version": "10.0.22631",
+    "cpus_physical": 24,
+    "cpus_logical": 32,
+    "mem": "63.70GB",
+    "gpu_id": 0,
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_total_memory": 24564.0
+}

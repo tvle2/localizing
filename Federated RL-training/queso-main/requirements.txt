@@ -1,0 +1,10 @@
+tqdm
+matplotlib
+scipy
+networkx
+seaborn
+polars
+
+
+# docs
+mkdocs

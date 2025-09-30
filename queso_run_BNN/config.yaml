@@ -1,0 +1,11 @@
+batch_size: 50
+l2_regularization: 0.0
+lr_nn: 0.001
+n_epochs: 100
+n_grid: 100
+n_phis: 100
+n_shots: 5000
+nn_dims:
+- 32
+- 32
+seed: 1234

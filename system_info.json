@@ -1,0 +1,55 @@
+{
+  "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12) \n[GCC 13.3.0]",
+  "platform": {
+    "system": "Linux",
+    "release": "5.14.0-503.40.1.el9_5.x86_64",
+    "machine": "x86_64"
+  },
+  "tensorflow": {
+    "version": "2.19.0",
+    "physical_gpus": [
+      {
+        "name": "NVIDIA L4",
+        "compute_capability": [
+          8,
+          9
+        ],
+        "driver_version": null,
+        "raw": {
+          "compute_capability": "(8, 9)",
+          "device_name": "NVIDIA L4"
+        }
+      }
+    ],
+    "build": {
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "build_info_raw_keys": [
+        "cpu_compiler",
+        "cuda_compute_capabilities",
+        "cuda_version",
+        "cudnn_version",
+        "is_cuda_build",
+        "is_rocm_build",
+        "is_tensorrt_build"
+      ]
+    },
+    "visible_logical_gpus": [
+      "LogicalDevice(name='/device:GPU:0', device_type='GPU')"
+    ]
+  },
+  "jax": {
+    "jax": "0.4.30",
+    "jaxlib": "0.4.30",
+    "devices": [
+      "TFRT_CPU_0"
+    ],
+    "backend": "cpu"
+  },
+  "packages": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.0+4.g1dfc98e16a",
+    "h5py": "3.14.0",
+    "matplotlib": "3.9.4"
+  }
+}

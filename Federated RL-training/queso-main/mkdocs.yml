@@ -1,0 +1,142 @@
+
+site_name: ""
+site_description: Queso - Design and benchmarking of variational quantum sensors
+use_directory_urls: false  # good for opening HTML files directly, but should be 'true' for deployment
+site_url: https://queso.readthedocs.io/en/latest/
+repo_url: https://github.com/benjimaclellan/queso
+repo_name: benjimaclellan/queso
+docs_dir: docs
+site_author: Benjamin MacLellan
+
+copyright: Copyright &copy; 2022 - 2024 Benjamin MacLellan
+
+
+
+nav:
+  - Introduction:
+      - Welcome: index.md
+  - Tutorials and guides:
+      - Quantum sensing: tutorials/quantum_sensing.md
+      - Sensing circuits: tutorials/sensor.ipynb
+      - Circuit ansatze: tutorials/ansatze.ipynb
+      - Neural network estimators: tutorials/network_estimator.ipynb
+      - Bayesian inference: tutorials/bayesian_inference.ipynb
+
+  - Reference:
+      - Sensors: reference/sensors.md
+      - Sampling: reference/sample.md
+      - Neural networks: reference/networks.md
+      - Training: reference/training.md
+
+
+
+
+theme:
+  name: material
+
+  logo: imgs/logo.png
+  favicon: imgs/logo-square.png
+  icon:
+    logo: imgs/logo.png
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+
+  features:
+    - announce.dismiss
+#    - content.action.edit
+#    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_root_heading: yes
+  - mknotebooks:
+      execute: false
+      timeout: 100
+      allow_errors: True
+      enable_default_jupyter_cell_styling: false
+      enable_default_pandas_dataframe_styling: false
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+      baselevel: 1
+      title: "Table of contents"
+
+  # for code snippets/syntax highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+  # for notes/admonitions
+  - admonition
+  - pymdownx.details
+
+#  # for flow diagrams
+#  - pymdownx.superfences:
+#      custom_fences:
+#        - name: mermaid
+#          class: mermaid
+#          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
